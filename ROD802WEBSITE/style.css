@@ -1,0 +1,204 @@
+/* Reset & Base */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+/* Base */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #F2F2F2;  /* was #FFFFFF */
+  color: #000000;
+  line-height: 1.5;
+}
+
+a { text-decoration: none; color: #007ACC; }
+a:hover, a:focus { color: #FF6F61; }
+button:hover, button:focus { background-color: #2A9D8F; }
+
+/* Focus styles for accessibility */
+a:focus, button:focus, input:focus, textarea:focus {
+  outline: 2px solid #007ACC;
+  outline-offset: 2px;
+}
+
+/* Header */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: #FFFFFF;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.logo-tagline .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+.logo-tagline .tagline {
+  font-size: 14px;
+  color: #555555;
+  margin-left: 10px;
+}
+.site-nav a {
+  margin-left: 30px;
+  font-size: 16px;
+  color: #264653;
+}
+
+/* Hero */
+.hero {
+  padding: 60px 20px;
+  background-color: #F0F0F0;
+}
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.hero-card {
+  background-color: #FFFFFF;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  margin-right: 40px;
+  width: 300px;
+}
+.hero-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+.hero-card h2 { font-size: 22px; margin-bottom: 5px; }
+.hero-card p { color: #555555; margin-bottom: 15px; }
+.social-links a { margin: 0 5px; font-size: 14px; color: #264653; }
+
+.hero-content { max-width: 600px; }
+.hero-content h1 { font-size: 48px; margin-bottom: 10px; }
+.subtitle { font-size: 18px; color: #555555; margin-bottom: 20px; }
+.hero-buttons .btn {
+  display: inline-block;
+  margin-right: 15px;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+}
+.btn.primary {
+  background-color: #007ACC;
+  color: #FFFFFF;
+}
+.btn.outline {
+  border: 2px solid #007ACC;
+  background: transparent;
+  color: #007ACC;
+}
+.hero-text { margin-top: 20px; color: #333333; }
+
+/* Section base */
+main .section {
+  padding: 80px 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+.section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #264653;
+}
+.section p { font-size: 16px; color: #555555; }
+
+/* Resume Timeline */
+.timeline { text-align: left; }
+.timeline li { margin-bottom: 10px; font-size: 16px; }
+
+/* Projects Grid */
+.projects-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.project-card {
+  background: #FFFFFF;
+  border-radius: 8px;
+  padding: 20px;
+  width: 250px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  text-align: left;
+}
+.project-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+.project-card h3 { font-size: 20px; margin-bottom: 10px; color: #264653; }
+.project-card p { font-size: 14px; color: #555555; }
+
+/* Contact Form */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  max-width: 500px;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #CCCCCC;
+  border-radius: 4px;
+  font-size: 16px;
+}
+.contact-form button {
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 30px;
+  background-color: #007ACC;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+.contact-info {
+  margin-top: 15px;
+  color: #333333;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #F0F0F0;
+  font-size: 14px;
+  color: #555555;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero-container { flex-direction: column; }
+  .hero-card { margin-right: 0; margin-bottom: 30px; }
+}
+
+/* About section image: square with deep frame */
+/* About section image: square with subtle frame */
+.about-photo {
+  display: block;
+  width: 200px;
+  height: 200px;
+  margin: 20px auto;
+  object-fit: cover;
+  border-radius: 0;               /* Kare köşeler */
+  border: 6px solid #F0F0F0;      /* Daha soft, göze batmayan gri çerçeve */
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.2),  /* Hafif dış gölge */
+    0 8px 16px rgba(0, 0, 0, 0.3), /* Derin dış gölge */
+    inset 0 0 0 1px rgba(0,0,0,0.1); /* İnce iç gölge */
+}
+
